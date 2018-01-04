@@ -2,6 +2,7 @@ FROM opennmt/opennmt:2063
 
 RUN git clone https://github.com/OpenNMT/OpenNMT ~/OpenNMT
 
+RUN sudo apt-get update
 RUN sudo apt-get install wget
 
 WORKDIR ~/OpenNMT
