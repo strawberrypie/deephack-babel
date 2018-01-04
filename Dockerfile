@@ -2,6 +2,10 @@ FROM opennmt/opennmt:2063
 
 RUN git clone https://github.com/OpenNMT/OpenNMT ~/OpenNMT
 
+RUN sudo apt-get install wget
+
+WORKDIR ~/OpenNMT
+
 RUN wget https://s3.amazonaws.com/opennmt-models/onmt_baseline_wmt15-all.en-de_epoch13_7.19_release.t7
 
 RUN mkdir /data
