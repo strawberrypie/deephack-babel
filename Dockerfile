@@ -12,9 +12,12 @@ RUN git clone https://github.com/moses-smt/mosesdecoder
 RUN git clone https://github.com/OpenNMT/OpenNMT /root/OpenNMT
 WORKDIR /root/OpenNMT
 
-# Downloading pretrained model
+# Downloading pretrained models
 RUN wget https://s3.amazonaws.com/opennmt-models/onmt_baseline_wmt15-all.en-de_epoch13_7.19_release.t7 \ 
     -O ~/OpenNMT/onmt_baseline_wmt15-all.en-de_epoch13_7.19_release.t7
+RUN wget http://data.statmt.org/rsennrich/wmt16_systems/en-de/truecase-model.en \
+    -O ~/OpenNMT/truecase-model.en
+
 
 RUN mkdir /data && mkdir /output
 
