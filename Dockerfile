@@ -13,10 +13,10 @@ RUN git clone https://github.com/OpenNMT/OpenNMT /root/OpenNMT
 WORKDIR /root/OpenNMT
 
 # Downloading pretrained models
-RUN wget https://s3.amazonaws.com/opennmt-models/onmt_baseline_wmt15-all.en-de_epoch13_7.19_release.t7 \ 
-    -O ~/OpenNMT/onmt_baseline_wmt15-all.en-de_epoch13_7.19_release.t7
-#RUN wget https://www.dropbox.com/s/f6z1jr1yit2r1rx/wmt15-it-en-de_checkpoint_release.t7?dl=1 \
+#RUN wget https://s3.amazonaws.com/opennmt-models/onmt_baseline_wmt15-all.en-de_epoch13_7.19_release.t7 \ 
 #    -O ~/OpenNMT/onmt_baseline_wmt15-all.en-de_epoch13_7.19_release.t7
+RUN wget https://www.dropbox.com/s/d8icnr6n36oiyc8/wmt15-it-en-de_checkpoint_release_last.t7?dl=1 \
+    -O ~/OpenNMT/onmt_baseline_wmt15-all.en-de_epoch13_7.19_release.t7
 RUN wget http://data.statmt.org/rsennrich/wmt16_systems/en-de/truecase-model.en \
     -O ~/OpenNMT/truecase-model.en
 
